@@ -1,0 +1,167 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(130deg, #07d9a3, #048fee);
+  background-size: 400% 400%;
+
+  -webkit-animation: gradient 16s ease infinite;
+  -moz-animation: gradient 16s ease infinite;
+  animation: gradient 16s ease infinite;
+}
+
+.content {
+  margin: auto;
+  padding: 20px;
+  width: 80%;
+  max-width: 1200px;
+  min-width: 300px;
+}
+
+.slick-slider {
+  margin: 30px auto 50px;
+}
+
+.slick-prev,
+.slick-next {
+  color: white;
+  opacity: 1;
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+  
+  path {
+    fill: rgba(255,255,255, 0.4);
+  }
+  
+  &:hover {
+    path {
+      fill: #FFFFFF;
+    }
+  }
+}
+
+.slick-prev {
+  left: -35px;
+}
+
+.slick-next {
+  right: -35px;
+}
+
+.slick-prev:before, 
+.slick-next:before {
+  content: none;
+}
+
+.slick-dots li button:before {
+  color: rgba(255,255,255, 0.4);
+  opacity: 1;
+  font-size: 8px;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #FFFFFF;
+}
+
+.quote-container {
+  min-height: 200px;
+  color: #666666;
+  font-size: 36px;
+  margin: 0 20px;
+  position: relative;
+  
+  &:hover {
+    cursor: grab;
+  }
+  
+  .portrait {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    
+    height: 140px;
+    width: 140px;
+    //border-radius: 50%;
+    overflow: hidden;
+    
+    img {
+      display: block;
+      height: auto;
+      width: 100%;
+    }
+  }
+  
+  .quote {
+    position: relative;
+    z-index: 600;
+    padding: 40px 0 40px 180px;
+    margin: 0;
+
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.4 !important;
+    font-family: Calibri;
+    color: white;
+    
+    p {
+      position: relative;
+      margin-bottom: 20px;
+      
+      &:first-child:before {
+        content: '\201C';
+        color: rgba(255, 255, 255, 0.44);
+        font-size: 7.5em;
+        font-weight: 700;
+        opacity: 1;
+        position: absolute;
+        top: -.4em;
+        left: -.2em;    
+        text-shadow: none;
+        z-index: -10;
+      }
+    }
+    
+    cite {
+      display: block;
+      font-size: 14px;
+      
+      span {
+        font-size: 16px;
+        font-style: normal;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+      }
+    }
+  }
+}
+
+.dragging .quote-container {
+  cursor: grabbing;
+}
+
+.octogon {
+  -webkit-clip-path: polygon(50.00% 0.00%, 38.11% 6.70%, 24.99% 6.72%, 18.06% 18.44%, 6.70% 25.00%, 6.56% 38.64%, 0.00% 50.00%, 6.70% 61.89%, 6.70% 75.00%, 18.44% 81.94%, 25.00% 93.30%, 38.64% 93.44%, 50.00% 100.00%, 61.88% 93.30%, 75.00% 93.30%, 81.94% 81.56%, 93.30% 74.90%, 93.44% 61.36%, 100.00% 50.00%, 93.30% 38.11%, 93.30% 25.00%, 81.56% 18.06%, 74.96% 6.70%, 61.36% 6.56%, 50.00% 0.00%);
+  clip-path: url(#octogon);
+  height: 140px;
+    width: 140px;
+}
+
+
+@-webkit-keyframes gradient {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+@-moz-keyframes gradient {
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}
+@keyframes gradient { 
+    0%{background-position:5% 0%}
+    50%{background-position:96% 100%}
+    100%{background-position:5% 0%}
+}

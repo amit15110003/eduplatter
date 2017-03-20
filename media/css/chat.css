@@ -1,0 +1,10 @@
+.bootom{
+	margin-bottom: 0px;
+	padding-bottom: 0px;
+	position:fixed;
+	bottom:0px;
+}
+.main{
+	
+  background-image: url("../image/diagonal-striped-brick.png");
+}
